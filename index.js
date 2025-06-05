@@ -1,7 +1,9 @@
-const express = require('express');
-const axios = require('axios');
-const cors = require('cors');
-require('dotenv').config();
+import express from 'express';
+import axios from 'axios';
+import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -30,3 +32,4 @@ app.get('/search', async (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`YouTube proxy running on port ${port}`));
+
